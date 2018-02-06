@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="books_shelf">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="books_shelf">
+      <ObjectId>16436</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12448</ObjectId>
+    </database>
+    <database id="4" parent="1" name="gorm">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="5" parent="1" name="users">
+      <ObjectId>16417</ObjectId>
+    </database>
+    <database id="6" parent="1" name="books_library">
+      <ObjectId>16424</ObjectId>
+    </database>
+    <role id="7" parent="1" name="gorm">
+      <ObjectId>16384</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="gorm-test">
+      <ObjectId>16386</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="gorm_test">
+      <ObjectId>16388</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="12" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-01-17.17:36:56.697</IntrospectionTimestamp>
+      <IntrospectionStateNumber>623</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="13" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="information_schema">
+      <ObjectId>12160</ObjectId>
+    </schema>
+    <sequence id="18" parent="12" name="books_id_seq">
+      <ObjectId>16437</ObjectId>
+      <StateNumber>623</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="19" parent="12" name="books">
+      <ObjectId>16439</ObjectId>
+      <StateNumber>623</StateNumber>
+    </table>
+    <column id="20" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>623</StateNumber>
+      <DefaultExpression>nextval(&apos;books_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>books_id_seq</SequenceName>
+    </column>
+    <column id="21" parent="19" name="title">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>623</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="22" parent="19" name="author">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>623</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="23" parent="19" name="publisher">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>623</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="24" parent="19" name="pages_count">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>623</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="25" parent="19" name="description">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>623</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="26" parent="19" name="books_pkey">
+      <ObjectId>16446</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="27" parent="19" name="books_pkey">
+      <ObjectId>16447</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>books_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
